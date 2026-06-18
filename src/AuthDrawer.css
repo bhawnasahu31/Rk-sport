@@ -1,0 +1,111 @@
+/* ===== Overlay ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(228, 222, 222, 0.55);
+  /* backdrop-filter: blur(4px); */
+  z-index: 99;
+}
+
+/* ===== Drawer Container ===== */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  max-width: 90%;
+  /* height: 100vh; */
+  background: #ffffff;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+  /* padding: 25px; */
+  /* z-index: 100; */
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+   height: 100%;
+}
+
+/* Open State */
+.drawer.open {
+  right: 0;
+}
+
+/* ===== Close Button ===== */
+.drawer button:first-child {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #f3f0f0;
+}
+
+/* ===== Title ===== */
+.drawer h2 {
+  text-align: center;
+  margin: 10px 0 25px;
+  font-size: 26px;
+  color: #222;
+}
+
+/* ===== Form ===== */
+.drawer form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Inputs */
+.drawer input {
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.drawer input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Submit Button */
+.drawer form button {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.drawer form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+}
+
+/* ===== Switch Mode Text ===== */
+.drawer p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #4f46e5;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.drawer p:hover {
+  text-decoration: underline;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 480px) {
+  .drawer {
+    width: 100%;
+    padding: 20px;
+  }
+}

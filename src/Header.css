@@ -1,0 +1,446 @@
+/* =========================
+   HEADER WRAPPER
+========================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #0b0b0b;
+  padding: 14px 40px;
+  border-bottom: 3px solid #f5c518;
+
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.logo .custom {
+  font-size: 18px;
+  color: #dcdcdc;
+}
+
+.logo .sports {
+  font-size: 28px;
+  color: white;
+}
+
+.logo .wear {
+  font-size: 13px;
+  color: #f5c518;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #f5c518;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #f5c518;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a.active {
+  color: #f5c518;
+}
+
+.nav a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   MOBILE MENU TOGGLE
+========================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #f5c518;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 230px;
+  padding: 9px 42px 9px 14px;
+  border-radius: 8px;
+  border: 1px solid #2a2a2a;
+  background: #141414;
+  color: #ffffff;
+  font-size: 13px;
+  transition: all 0.25s ease;
+}
+
+.search-box input::placeholder {
+  color: #8a8a8a;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #f5c518;
+  box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.15);
+  background: #181818;
+}
+
+.search-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #a8a8a8;
+}
+
+/* =========================
+   ICONS AREA
+========================= */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icon-user {
+  font-size: 20px;
+  color: #f0f0f0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon-user:hover {
+  color: #f5c518;
+  transform: scale(1.1);
+}
+
+.icons svg {
+  font-size: 20px;
+  cursor: pointer;
+  color: #f0f0f0;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.icons svg:hover {
+  color: #f5c518;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* =========================
+   CART BLOCK
+========================= */
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #f0f0f0;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.25s ease;
+}
+
+.cart:hover {
+  background: #1b1b1b;
+}
+
+/* =========================
+   RESPONSIVE - TABLETS
+========================= */
+
+@media (max-width: 1100px) {
+  .header {
+    padding: 14px 24px;
+  }
+
+  .nav {
+    gap: 18px;
+  }
+
+  .search-box input {
+    width: 180px;
+  }
+}
+
+@media (max-width: 900px) {
+  /* Hide desktop nav, show mobile menu */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #0f0f0f;
+    flex-direction: column;
+    padding: 80px 30px 30px;
+    gap: 0;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+    transition: right 0.4s ease;
+    border-left: 2px solid #f5c518;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
+    padding: 16px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .nav a::after {
+    display: none;
+  }
+
+  .search-box input {
+    width: 150px;
+    padding: 8px 38px 8px 12px;
+    font-size: 12px;
+  }
+
+  .search-icon {
+    font-size: 13px;
+    right: 12px;
+  }
+
+  .icons {
+    gap: 16px;
+  }
+
+  .icons svg {
+    font-size: 18px;
+  }
+
+  .cart {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}
+
+/* =========================
+   RESPONSIVE - PHONES
+========================= */
+
+@media (max-width: 700px) {
+  .header {
+    padding: 12px 16px;
+  }
+
+  /* Smaller logo on mobile */
+  .logo .custom {
+    font-size: 15px;
+  }
+
+  .logo .sports {
+    font-size: 24px;
+  }
+
+  .logo .wear {
+    font-size: 11px;
+  }
+
+  /* Hide search on small phones, show via icon */
+  .search-box {
+    display: none;
+  }
+
+  /* Add a search icon to icons group */
+  .search-icon-mobile {
+    display: block;
+    font-size: 18px;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: color 0.25s ease;
+  }
+
+  .search-icon-mobile:hover {
+    color: #f5c518;
+  }
+
+  /* Show search box when activated */
+  .search-box.mobile-search-active {
+    display: block;
+    position: fixed;
+    top: 60px;
+    left: 16px;
+    right: 16px;
+    z-index: 999;
+  }
+
+  .search-box.mobile-search-active input {
+    width: 100%;
+  }
+
+  /* Adjust icons spacing */
+  .icons {
+    gap: 12px;
+  }
+
+  .icons svg {
+    font-size: 18px;
+  }
+
+  /* Simplify cart on mobile */
+  .cart span {
+    display: none;
+  }
+
+  .cart {
+    padding: 4px;
+  }
+
+  /* Mobile menu adjustments */
+  .nav {
+    width: 100%;
+    right: -100%;
+    padding: 70px 20px 30px;
+  }
+
+  .nav a {
+    padding: 14px 0;
+    font-size: 15px;
+  }
+
+  .menu-toggle span {
+    width: 22px;
+    height: 2.5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 10px 12px;
+  }
+
+  .logo .custom {
+    font-size: 13px;
+  }
+
+  .logo .sports {
+    font-size: 20px;
+  }
+
+  .logo .wear {
+    font-size: 10px;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+
+  .icons svg {
+    font-size: 16px;
+  }
+
+  .menu-toggle {
+    padding: 4px;
+  }
+
+  .menu-toggle span {
+    width: 20px;
+  }
+}
+
+/* =========================
+   MOBILE MENU OVERLAY
+========================= */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (min-width: 901px) {
+  .menu-overlay {
+    display: none !important;
+  }
+}

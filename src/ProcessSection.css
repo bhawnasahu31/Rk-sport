@@ -1,0 +1,121 @@
+.process-section {
+  padding: 90px 60px;
+  background: #ffffff;
+}
+
+/* ===== Header ===== */
+
+.process-header {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.process-header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.process-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* ===== Divider ===== */
+
+.divider {
+  width: 90px;
+  height: 4px;
+  background: #ffd800;
+  margin: 40px auto 70px;
+  border-radius: 10px;
+}
+
+/* ===== Rows ===== */
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.process-step-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.process-step-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ===== Text ===== */
+
+.step-text {
+  flex: 1;
+}
+
+.step-number {
+  font-size: 42px;
+  font-weight: 900;
+  color: #ffd800;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.step-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffb800;
+  background: #fff4d6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.step-text h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.step-text p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* ===== Image ===== */
+
+.step-image {
+  flex: 1;
+}
+
+.step-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.step-image img:hover {
+  transform: scale(1.04);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 900px) {
+  .process-step-row,
+  .process-step-row.reverse {
+    flex-direction: column;
+  }
+
+  .process-section {
+    padding: 60px 24px;
+  }
+
+  .process-header h1 {
+    font-size: 28px;
+  }
+}

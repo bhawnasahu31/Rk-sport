@@ -1,0 +1,387 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 60px;
+  background: #ffd800;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(245, 197, 24, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(245, 197, 24, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* =========================
+   OFFER BADGE
+========================= */
+.offer-badge {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  background:palevioletred;
+  color: #0a0a0a;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(245, 197, 24, 0.4);
+  z-index: 10;
+  animation: pulse 2s infinite;
+}
+
+.offer-badge span {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.offer-badge small {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.top-text {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color:black;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.sub-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.hero-btn {
+  background: #f5c518;
+  color: #0a0a0a;
+  border: none;
+  padding: 16px 40px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* box-shadow: 0 4px 16px rgba(245, 197, 24, 0.3); */
+}
+
+.hero-btn:hover {
+  background: #ffdb4d;
+  transform: translateY(-2px);
+  /* box-shadow: 0 6px 24px rgba(245, 197, 24, 0.5); */
+}
+
+.hero-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-width: 550px;
+}
+
+.hero-image img {
+  width: 50%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
+  /* filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.5)); */
+}
+
+/* =========================
+   RESPONSIVE - TABLETS
+========================= */
+@media (max-width: 1100px) {
+  .hero {
+    padding: 60px 40px;
+    min-height: 550px;
+    gap: 30px;
+  }
+
+  .offer-badge {
+    top: 30px;
+    right: 40px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .offer-badge span {
+    font-size: 28px;
+  }
+
+  .offer-badge small {
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .sub-text {
+    font-size: 15px;
+  }
+
+  .hero-image {
+    max-width: 450px;
+  }
+
+  .hero-image img {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 50px 30px 40px;
+    min-height: auto;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .offer-badge {
+    top: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .offer-badge span {
+    font-size: 24px;
+  }
+
+  .offer-badge small {
+    font-size: 11px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    order: 2;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .sub-text {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image {
+    order: 1;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .hero-image img {
+    max-width: 350px;
+  }
+}
+
+/* =========================
+   RESPONSIVE - PHONES
+========================= */
+@media (max-width: 700px) {
+  .hero {
+    padding: 40px 20px 30px;
+    gap: 30px;
+  }
+
+  .offer-badge {
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .offer-badge span {
+    font-size: 20px;
+  }
+
+  .offer-badge small {
+    font-size: 9px;
+  }
+
+  .top-text {
+    font-size: 10px;
+    margin-bottom: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .sub-text {
+    font-size: 14px;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  .hero-btn {
+    padding: 14px 32px;
+    font-size: 13px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .hero-image {
+    max-width: 320px;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 16px 25px;
+  }
+
+  .offer-badge {
+    top: 12px;
+    right: 12px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .offer-badge span {
+    font-size: 18px;
+  }
+
+  .offer-badge small {
+    font-size: 8px;
+  }
+
+  .top-text {
+    font-size: 9px;
+    margin-bottom: 14px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .sub-text {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+
+  .hero-btn {
+    padding: 12px 28px;
+    font-size: 12px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+  }
+
+  .hero-image img {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .sub-text {
+    font-size: 12px;
+  }
+
+  .hero-image {
+    max-width: 240px;
+  }
+
+  .hero-image img {
+    max-width: 200px;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+@media (prefers-reduced-motion: reduce) {
+  .offer-badge {
+    animation: none;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

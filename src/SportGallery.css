@@ -1,0 +1,84 @@
+.gallery-page {
+  background: #efefef;
+  min-height: 100vh;
+}
+
+/* red header */
+
+.gallery-topbar {
+  background: #f3b50b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 40px;
+  font-weight: 600;
+}
+
+.top-menu span {
+  margin-left: 28px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* title */
+
+.gallery-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* grid */
+
+.gallery-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+/* card */
+
+.gallery-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,.15);
+  transition: .2s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+/* image */
+
+.gallery-img {
+  background: #ddd;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-img img {
+  max-height: 120px;
+  border-radius: 50%;
+}
+
+/* label */
+
+.gallery-label {
+  background: #f5d20a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.empty-msg {
+  text-align: center;
+  margin-top: 40px;
+}

@@ -1,0 +1,107 @@
+.designer-page {
+  background: #f3f4f6;
+  min-height: 100vh;
+  font-family: system-ui, Arial;
+}
+
+/* HEADER */
+
+.designer-header {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  box-shadow: 0 2px 8px  #f3f4f6;;
+}
+
+.designer-logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.designer-logo .custom {
+  font-size: 18px;
+  color: #dcdcdc;
+}
+
+.designer-logo .sports {
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.designer-logo .wear {
+  font-size: 19px;
+  color: #f0c21d;
+  letter-spacing: 2px;
+}
+
+.designer-menu span {
+  margin-left: 26px;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: .95;
+}
+
+.designer-menu span:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* GRID */
+
+.designer-grid {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+
+.designer-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .25s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.designer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* IMAGE */
+
+.designer-img-wrap {
+  background: #ddd;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.designer-img-wrap img {
+  max-height: 120px;
+  max-width: 90%;
+  object-fit: contain;
+   border-radius: 50%;
+}
+
+/* LABEL */
+
+.designer-label {
+  background: #ebc10a;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}

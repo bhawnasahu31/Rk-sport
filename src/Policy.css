@@ -1,0 +1,129 @@
+/* ===== PAGE BACKGROUND ===== */
+
+.policy-page {
+  background: linear-gradient(to bottom, #f4f6f9, #eef1f5);
+  padding: 70px 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== MAIN CARD ===== */
+
+.policy-card {
+  background: #ffffff;
+  max-width: 1050px;
+  width: 100%;
+  padding: 55px 60px;
+  border-radius: 16px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  position: relative;
+}
+
+/* subtle top accent bar */
+
+.policy-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(90deg, #111, #444);
+}
+
+/* ===== HEADINGS ===== */
+
+.policy-card h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+.policy-card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* ===== SECTION BLOCKS ===== */
+
+.policy-card section {
+  margin-top: 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ececec;
+}
+
+.policy-card section:last-child {
+  border-bottom: none;
+}
+
+/* ===== TEXT ===== */
+
+.policy-card p {
+  color: #4a4f57;
+  line-height: 1.75;
+  font-size: 15.5px;
+  margin: 0;
+}
+
+/* ===== LISTS ===== */
+
+.policy-card ul {
+  margin: 10px 0 0 18px;
+  padding: 0;
+  color: #4a4f57;
+}
+
+.policy-card li {
+  margin-bottom: 6px;
+  line-height: 1.7;
+  font-size: 15.5px;
+}
+
+/* ===== STRONG TEXT ===== */
+
+.policy-card strong {
+  color: #111;
+  font-weight: 600;
+}
+
+/* ===== LINKS INSIDE POLICY ===== */
+
+.policy-card a {
+  color: #0a66c2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.policy-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .policy-card {
+    padding: 35px 25px;
+  }
+
+  .policy-card h1 {
+    font-size: 28px;
+  }
+
+  .policy-card h2 {
+    font-size: 18px;
+  }
+
+  .policy-card p,
+  .policy-card li {
+    font-size: 14.5px;
+  }
+}

@@ -1,0 +1,150 @@
+/* ===== Page Layout ===== */
+
+.page {
+  padding: 60px 40px;
+  min-height: 80vh;
+  background: #f8f9fc;
+}
+
+.page h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111;
+  text-align: center;
+}
+
+/* ===== Grid Layout ===== */
+
+.saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* ===== Card ===== */
+
+.list-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.list-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.14);
+}
+
+/* ===== Jersey Image ===== */
+
+.list-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f3f4f7;
+  padding: 10px;
+  margin-bottom: 14px;
+}
+
+/* ===== Text ===== */
+
+.list-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.list-card p b {
+  font-size: 16px;
+  color: #000;
+}
+
+/* ===== Sport Badge ===== */
+
+.sport-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: #ffd800;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ===== Empty State ===== */
+
+.page p {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+  margin-top: 40px;
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width: 600px) {
+  .page {
+    padding: 40px 18px;
+  }
+
+  .page h2 {
+    font-size: 24px;
+  }
+
+  .list-card {
+    padding: 16px;
+  }
+}
+.empty-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.player-line {
+  font-size: 16px;
+  margin-top: 6px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.edit-btn {
+  flex: 1;
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  flex: 1;
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.edit-btn:hover { opacity: .85; }
+.delete-btn:hover { opacity: .85; }

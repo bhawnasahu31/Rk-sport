@@ -1,0 +1,175 @@
+/* ===== Overlay ===== */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  /* backdrop-filter: blur(4px); */
+  z-index: 999;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* ===== Drawer Panel ===== */
+/* ===== Drawer Panel ===== */
+/* 
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;                 
+  width: 420px;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+
+  box-shadow: -8px 0 30px rgba(0,0,0,0.18);
+
+  transform: translateX(100%);     
+  transition: transform 0.35s cubic-bezier(.77,0,.18,1);
+}
+
+.drawer.open {
+  transform: translateX(0);       
+} */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, 100vw);   /* ⭐ never exceed screen */
+  max-width: 100vw;
+  height: 100vh;
+
+  background: #ffffff;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+
+  box-shadow: -8px 0 30px rgba(0,0,0,0.18);
+
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(.77,0,.18,1);
+}
+
+.drawer.open {
+  transform: translateX(0);
+}
+
+
+
+/* ===== Close Button ===== */
+
+.close-btn {
+  align-self: flex-end;
+  border: none;
+  background: #f3f3f3;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  background: #111;
+  color: white;
+  transform: rotate(90deg);
+}
+
+
+/* ===== Title ===== */
+
+.drawer h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0 20px;
+}
+
+
+/* ===== Items Area ===== */
+
+.drawer-items {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.drawer-items p {
+  text-align: center;
+  color: #888;
+  margin-top: 60px;
+  font-size: 15px;
+}
+
+
+/* ===== Example Cart Item Style (future use) ===== */
+
+.drawer-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #fafafa;
+  margin-bottom: 14px;
+  transition: 0.2s;
+}
+
+.drawer-item:hover {
+  background: #f0f0f0;
+}
+
+
+/* ===== Checkout Button ===== */
+
+.checkout-btn {
+  margin-top: 16px;
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #ffd800, #ffb800);
+  box-shadow: 0 6px 18px rgba(255, 184, 0, 0.35);
+
+  transition: 0.25s;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(255, 184, 0, 0.5);
+}
+
+
+/* ===== Scrollbar Modern ===== */
+
+.drawer-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.drawer-items::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 520px) {
+  .drawer {
+    width: 100%;
+     transform: translateX(100%);
+  }
+}

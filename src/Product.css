@@ -1,0 +1,229 @@
+.products {
+  padding: 80px 60px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.products h2 {
+  font-size: 28px;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* GRID */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+/* CARD */
+
+.product-card {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: 0.35s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  min-height: 120px;  
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+
+.product-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+}
+
+/* DISCOUNT BADGE */
+
+.discount {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #4caf50;
+  color: #fff;
+  padding: 7px 11px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* TEXT */
+
+.product-card h4 {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.category {
+  font-size: 13px;
+  color: #777;
+}
+
+.price {
+  margin-top: 8px;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.price .new {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+/* HOVER ICONS */
+
+.hover-icons {
+  position: absolute;
+  top: 15px;
+  right: -60px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: 0.35s;
+}
+
+.hover-icons i {
+  background: #fff;
+  padding: 9px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+
+.hover-icons i:hover {
+  transform: scale(1.15);
+}
+
+.product-card:hover .hover-icons {
+  right: 15px;
+}
+
+/* BUTTON AREA */
+
+.card-buttons {
+  margin-top: 15px;
+  display: grid;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.3s;
+}
+
+.product-card:hover .card-buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ADD TO CART */
+
+.add-cart {
+  padding: 12px;
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.add-cart:hover {
+  background: #256428;
+}
+
+/* CUSTOMIZE BUTTON */
+
+.customize-btn {
+  padding: 11px;
+  border: 2px solid #ffd800;
+  background: transparent;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.customize-btn:hover {
+  background: #ffd800;
+  transform: translateY(-2px);
+}
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* ======================
+   PREVIEW MODAL
+====================== */
+
+.preview-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn .25s ease;
+}
+
+.preview-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* .preview-box img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+} */
+
+/* ======================
+   WISHLIST ACTIVE
+====================== */
+
+.hover-icons i.wish-active {
+  background: #ffebee;
+  color: #e53935;
+  transform: scale(1.1);
+}
+
+/* animation */
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}

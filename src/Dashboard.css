@@ -1,0 +1,80 @@
+/* ===== Page Wrapper ===== */
+.dash {
+  min-height: 100vh;
+  padding: 40px 30px;
+  background: #f4f6fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== Welcome Text ===== */
+.dash h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 30px;
+}
+
+/* ===== Grid Layout ===== */
+.dash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+/* ===== Card ===== */
+.dash-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px 22px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  border-left: 5px solid #4f46e5;
+}
+
+/* Hover Effect */
+.dash-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Card Title ===== */
+.dash-card h3 {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* ===== Card Text ===== */
+.dash-card p {
+  font-size: 14px;
+  color: #4f46e5;
+  font-weight: 500;
+}
+
+/* ===== Admin Card Special Style ===== */
+.dash-card.admin {
+  border-left-color: #dc2626;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .dash {
+    padding: 25px 16px;
+  }
+
+  .dash h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+.dash-card-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.dash-link {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.8;
+}

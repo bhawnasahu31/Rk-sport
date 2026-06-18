@@ -1,0 +1,178 @@
+.customize-section {
+  padding: 80px 60px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fafafa;
+}
+
+.customize-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+  font-weight: 700;
+  color: #111;
+}
+
+.customize-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* Jersey Preview */
+.jersey-preview {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 1px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.jersey-img {
+  width: 100%;
+  height: auto;
+}
+
+.jersey-text {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+  color: white;
+}
+
+.player-name {
+  display: block;
+  font-size: clamp(18px, 3vw, 28px);
+  font-weight: 700;
+}
+
+.player-number {
+  display: block;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 800;
+}
+
+.jersey-side-label {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Form Panel */
+.custom-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-group input[type="text"],
+.input-group input[type="color"],
+.input-group select,
+.input-group input[type="number"],
+.input-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  transition: 0.25s;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #ffd800;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Buttons */
+.customize-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.add-cart {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.add-cart:hover {
+  background: #256428;
+}
+
+.save-design {
+  background: #ffd800;
+  color: #111;
+}
+
+.save-design:hover {
+  background: #e6c200;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .customize-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.jersey-gallery h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #111;
+}
+
+.jersey-thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail.selected {
+  border-color: #ffd800;
+}
